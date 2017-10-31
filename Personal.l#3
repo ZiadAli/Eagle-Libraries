@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -155,6 +155,19 @@
 <text x="-15.24" y="-25.4" size="1.778" layer="96">&gt;VALUES</text>
 <pin name="NC" x="5.08" y="-17.78" length="middle" direction="nc" rot="R180"/>
 </symbol>
+<symbol name="LT3014">
+<pin name="IN" x="-8.89" y="3.81" length="middle"/>
+<pin name="SHDN" x="-8.89" y="-2.54" length="middle"/>
+<pin name="GND" x="-8.89" y="-8.89" length="middle"/>
+<pin name="OUT" x="13.97" y="1.27" length="middle" rot="R180"/>
+<pin name="ADJ" x="13.97" y="-6.35" length="middle" rot="R180"/>
+<wire x1="-3.81" y1="6.35" x2="-3.81" y2="-11.43" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="-11.43" x2="8.89" y2="-11.43" width="0.254" layer="94"/>
+<wire x1="8.89" y1="-11.43" x2="8.89" y2="6.35" width="0.254" layer="94"/>
+<wire x1="8.89" y1="6.35" x2="-3.81" y2="6.35" width="0.254" layer="94"/>
+<text x="-2.54" y="8.89" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-15.24" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="MCP41HV51" prefix="POT" uservalue="yes">
@@ -180,6 +193,26 @@ with SPI Serial Interface and Volatile Memory</description>
 <connect gate="G$1" pin="V-" pad="10"/>
 <connect gate="G$1" pin="VL" pad="1"/>
 <connect gate="G$1" pin="WLAT" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LT3014">
+<description>The LT3014 is a high voltage, micropower low dropout linear regulator</description>
+<gates>
+<gate name="G$1" symbol="LT3014" x="0" y="1.27"/>
+</gates>
+<devices>
+<device name="" package="LT3014">
+<connects>
+<connect gate="G$1" pin="ADJ" pad="5"/>
+<connect gate="G$1" pin="GND" pad="2"/>
+<connect gate="G$1" pin="IN" pad="1"/>
+<connect gate="G$1" pin="OUT" pad="4"/>
+<connect gate="G$1" pin="SHDN" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
