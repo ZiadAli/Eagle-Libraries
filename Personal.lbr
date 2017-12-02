@@ -200,8 +200,8 @@
 </symbol>
 <symbol name="LT3014">
 <pin name="IN" x="-8.89" y="3.81" length="middle"/>
-<pin name="SHDN" x="-8.89" y="-2.54" length="middle"/>
-<pin name="GND" x="-8.89" y="-8.89" length="middle"/>
+<pin name="GND" x="-8.89" y="-2.54" length="middle"/>
+<pin name="SHDN" x="-8.89" y="-8.89" length="middle"/>
 <pin name="OUT" x="13.97" y="1.27" length="middle" rot="R180"/>
 <pin name="ADJ" x="13.97" y="-6.35" length="middle" rot="R180"/>
 <wire x1="-3.81" y1="6.35" x2="-3.81" y2="-11.43" width="0.254" layer="94"/>
@@ -289,10 +289,10 @@ with SPI Serial Interface and Volatile Memory</description>
 <devices>
 <device name="" package="LT3014">
 <connects>
-<connect gate="G$1" pin="ADJ" pad="5"/>
+<connect gate="G$1" pin="ADJ" pad="4"/>
 <connect gate="G$1" pin="GND" pad="2"/>
 <connect gate="G$1" pin="IN" pad="1"/>
-<connect gate="G$1" pin="OUT" pad="4"/>
+<connect gate="G$1" pin="OUT" pad="5"/>
 <connect gate="G$1" pin="SHDN" pad="3"/>
 </connects>
 <technologies>
